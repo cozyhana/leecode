@@ -1,8 +1,8 @@
 /*
  * @Author: hf 
- * @Date: 2019-05-07 14:32:44 
+ * @Date: 2019-05-07 19:22:22 
  * @Last Modified by: hf
- * @Last Modified time: 2019-05-07 15:31:11
+ * @Last Modified time: 2019-05-07 20:16:11
  */
 //罗马数字转整数 https://leetcode-cn.com/problems/roman-to-integer/
 var romanToInt = function (s) {
@@ -22,17 +22,25 @@ var romanToInt = function (s) {
     M: 1000
   }
   var arr = s.split('')
-  console.log(1)
+  console.log(arr)
   let num = 0
+
   for (var i = 0; i < arr.length - 1; i++) {
-    let num1 = romanArr[arr[i] + arr[i + 1]]
-    let num2 = romanArr[arr[i]]
-    if (typeof num1 != undefined) {
-      num += num1
-      i++
-    } else {
-      num += num2
+
+    for (var j = 1; j < arr.length; j++) {
+      if (arr[i] === 'I' && arr[j] !== [I]) {
+        //I排在的最前，且比他大的数排在了后面
+        //I只能在V,X前
+        if (arr[j] === 'V') {
+
+        } else if (arr[j] === 'X') {
+
+        } else {
+          return 'wrong Roman Number'
+        }
+      }
     }
+
   }
   return num
 };
