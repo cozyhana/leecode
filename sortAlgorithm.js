@@ -112,3 +112,29 @@
 // 10.基数排序:
 //   解析:基数排序是按照低位先排序，然后收集；再按照高位排序，然后再收集；依次类推，直到最高位。有时候有些属性是有优先级顺序的，先按低优先级排序，再按高优
 //   　　先级排序。最后的次序就是高优先级高的在前，高优先级相同的低优先级高的在前。基数排序基于分别排序，分别收集，所以是稳定的。
+
+// 二分查找
+// 思路
+// （1）首先，从有序数组的中间的元素开始搜索，如果该元素正好是目标元素（即要查找的元素），则搜索过程结束，否则进行下一步。
+// （2）如果目标元素大于或者小于中间元素，则在数组大于或小于中间元素的那一半区域查找，然后重复第一步的操作。
+// （3）如果某一步数组为空，则表示找不到目标元素。
+// 非递归算法
+function binary_search(arr, key) {
+  let low = 0;
+  let high = arr.length - 1;
+  while (low <= high) {
+    let mid = parseInt((high + low) / 2);
+    console.log(key, mid, arr[mid])
+    if (key === arr[mid]) {
+      return mid;
+    } else if (key > arr[mid]) {
+      low = mid + 1;
+    } else if (key < arr[mid]) {
+      high = mid - 1;
+    } else {
+      return -1;
+    }
+  }
+}
+let num = binary_search([12, 31, 2, 3, 14, 1, 4, 35], 2)
+console.log(num)
