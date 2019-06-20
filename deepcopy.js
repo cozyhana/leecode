@@ -16,7 +16,6 @@ function deepCopy(obj) {
       }
     }
   }
-  console.log(result === obj)
   return result;
 }
 
@@ -32,4 +31,5 @@ let obj = {
 }
 
 let a = deepCopy(obj)
-console.log(a)
+a.hf = 'hf'
+console.log(obj)
