@@ -30,6 +30,4 @@ let obj = {
   }
 }
 
-let a = deepCopy(obj)
-a.hf = 'hf'
 console.log(obj)

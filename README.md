@@ -7,6 +7,7 @@
 1. [深拷贝](./deepcopy.js)
 2. [二叉树翻转](./invertTree.js)
 3. [排序算法](./sortAlgorithm.js)
+4. [URL分解为协议(ftp、http等)、域地址、页/路径](./javascript/zhengze.js)
 
 ### [ 三年大厂面试官-前端面试题（偏难）](https://juejin.im/post/5cb0315f518825215e61ec14)
 
@@ -25,6 +26,7 @@
 ### [框架通识](./frameKnown.md)
 
 ### [前端面试之道](https://yuchengkai.cn/docs/frontend/)
+1.  [正则](./javascript/zhengze.js)
+2.  [内置类型](./javascript/base.js)
 
-### [移动开发](./mobile/mobile.md)
-
+### [移动开发](mobile/mobile.md)
